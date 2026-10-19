@@ -100,7 +100,7 @@ namespace OOP_2
 
     class Task_9
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Random rnd = new Random();
             double accrued = rnd.Next(40000, 150001);

@@ -5,7 +5,7 @@ namespace OOP_2
 {
     class Task_8
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             const double discount = 0.10;   
 

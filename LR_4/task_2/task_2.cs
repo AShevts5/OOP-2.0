@@ -30,7 +30,7 @@ namespace OOP_2
 
     class Task_2t
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             WriteLine("Список товаров на складе\n");
 

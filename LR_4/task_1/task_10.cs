@@ -5,7 +5,7 @@ namespace OOP_2
 {
     class Task_10
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Random rnd = new Random();
             string[] names = { "Шевцова А.В.", "Жуков Л.Н.", "Степачков Д.А." };

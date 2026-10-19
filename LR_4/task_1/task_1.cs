@@ -94,7 +94,7 @@ namespace OOP_2
 
     class Task_1
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Random rnd = new Random();
             double a = rnd.Next(-10, 11);

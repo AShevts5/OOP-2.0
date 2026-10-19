@@ -32,7 +32,7 @@ namespace OOP_2
 
     class ClientsTask
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             WriteLine("Список постоянных клиентов магазина\n");
 

@@ -5,7 +5,7 @@ namespace OOP_2
 {
     class Task_6
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Random rnd = new Random();
             double gasVolume = rnd.Next(10, 101);

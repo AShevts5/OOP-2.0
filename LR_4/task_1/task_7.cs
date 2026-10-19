@@ -5,7 +5,7 @@ namespace OOP_2
 {
     class Task_7
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             try
             {

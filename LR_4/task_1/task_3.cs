@@ -112,7 +112,7 @@ namespace OOP_2
 
     class Task_3
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Random rnd = new Random();
             double quantity = rnd.Next(1, 11);                          

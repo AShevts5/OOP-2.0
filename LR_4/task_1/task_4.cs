@@ -5,7 +5,7 @@ namespace OOP_2
 {
     class Task_4
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Random rnd = new Random();
             double kwh = rnd.Next(100, 401);

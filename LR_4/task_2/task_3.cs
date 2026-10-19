@@ -30,7 +30,7 @@ namespace OOP_2
 
     class Task_S
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             WriteLine("Список студентов на получение места в общежитии\n");
 
