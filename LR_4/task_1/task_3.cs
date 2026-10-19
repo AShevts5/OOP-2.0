@@ -9,12 +9,14 @@ namespace OOP_2
         private string name;
         private double quantity;
         private double price;
+        private string unit;
 
-        public Payment(string name, double quantity, double price)
+        public Payment(string name, double quantity, double price, string unit = "шт.")
         {
-            this.name = name;
-            this.quantity = quantity;   
-            this.price = price;
+            Name = name;
+            Quantity = quantity;   
+            Price = price;
+            Unit = unit;
         }
 
         public string Name
@@ -45,9 +47,10 @@ namespace OOP_2
             }
         }
 
-        public virtual string Unit   // красиви реализация полиморфизма для единиц измерения
+        public string Unit   
         {
-            get { return "шт."; }
+            get { return unit; }
+            set { unit = value; }
         }
 
         public double Cost
@@ -61,18 +64,20 @@ namespace OOP_2
         }
     }
 
-    // второй способ: методы доступа без аксессоров 
+    // Второй способ: методы доступа без аксессоров 
     public class Payment2
     {
         private string name;
         private double quantity;
         private double price;
+        private string unit;
 
-        public Payment2(string name, double quantity, double price)
+        public Payment2(string name, double quantity, double price, string unit = "шт.")
         {
             SetName(name);
             SetQuantity(quantity);
             SetPrice(price);
+            SetUnit(unit);
         }
 
         public void SetName(string value) { name = value; }
@@ -94,7 +99,8 @@ namespace OOP_2
         }
         public double GetPrice() { return price; }
 
-        public virtual string GetUnit() { return "шт."; }
+        public void SetUnit(string value) { unit = value; }
+        public string GetUnit() { return unit; }
 
         public double GetCost() { return Math.Round(quantity * price, 2); }
 
@@ -112,13 +118,20 @@ namespace OOP_2
             double quantity = rnd.Next(1, 11);                          
             double price = Math.Round(rnd.NextDouble() * 990 + 10, 2);  
 
-            Payment p1 = new Payment("Стоимость товара", quantity, price);
-            Write("Первый способ: ");
-            p1.Print();
+            try
+            {
+                Payment p1 = new Payment("Стоимость товара", quantity, price);
+                Write("Первый способ: ");
+                p1.Print();
 
-            Payment2 p2 = new Payment2("Стоимость товара", quantity, price);
-            Write("Второй способ: ");
-            p2.Print();
+                Payment2 p2 = new Payment2("Стоимость товара", quantity, price);
+                Write("Второй способ: ");
+                p2.Print();
+            }
+            catch (ArgumentException ex)
+            {
+                WriteLine($"Ошибка в данных: {ex.Message}");
+            }
 
         }
     }
