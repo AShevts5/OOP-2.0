@@ -16,7 +16,7 @@ namespace OOP
             get => _year;
             init
             {
-                if (value < 2000 || value > 2100)
+                if (value < 2000 || value > 2026)
                     throw new ArgumentException("Год должен быть в диапазоне 2000-2026.");
                 _year = value;
             }
